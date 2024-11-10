@@ -16,6 +16,10 @@ jobs:
         uses: actions/checkout@v3.0.2
       - name: Install Cloud Runtime CLI
         uses: Vonage/cloud-runtime-cli@main
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'  
       - name: Install dependencies
         run: npm ci
       - name: Deploy

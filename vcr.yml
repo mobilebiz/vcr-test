@@ -1,0 +1,19 @@
+project:
+    name: vcr-test
+instance:
+    name: dev
+    runtime: nodejs18
+    region: aws.apse1
+    application-id: 287bd511-e108-4a43-a176-b4caf9e819bf
+    environment:
+        - name: ENV_VAR
+          value: vcr-test
+    entrypoint:
+        - node
+        - index.js
+debug:
+    name: debugger
+    entrypoint:
+        - nodemon
+        - --inspect
+        - index.js
